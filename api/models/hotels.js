@@ -1,13 +1,16 @@
-const data = require('../data/data');
+import data from '../data/data';
+import Text from '../helpers/text';
 
 const hotelModel = {};
 
-hotelModel.get = (callback) => {
+hotelModel.get = (q, callback) => {
     if(!data) {
         throw error;
     }
 
-    callback(data);
+    const hotels = (q) ? data.filter(Text.search(q, 'name')) : data;
+
+    callback(hotels);
 }
 
 module.exports = hotelModel;
