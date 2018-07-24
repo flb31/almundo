@@ -4,10 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server": "nodemon --exec babel-node server.js"
+    "server": "nodemon --exec babel-node server.js",
+    "test": "mocha \"./api/test/**/*.spec.js*\""
   },
   "nodemonConfig": {
-    "ignore": ["app/*"]
+    "ignore": [
+      "app/*"
+    ]
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "mocha": "^5.2.0"
   }
 }
