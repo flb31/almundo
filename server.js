@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+import morgan from 'morgan';
+import bodyParser from 'body-parser';
 
 // Settings
 app.set('port', process.env.PORT || 3000 );

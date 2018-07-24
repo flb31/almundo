@@ -4,4 +4,7 @@ module.exports = function(app) {
     app.get('/v1', (req, res) => {
         res.send('API almundo.com v1');
     });
+
+    // Hotels
+    require('./hotels')(app);
 }
