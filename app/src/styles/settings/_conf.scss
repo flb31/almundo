@@ -25,6 +25,8 @@ $containers--bg: #ffffff;
 $title: #036fc7;
 $price: #dd6100;
 $icons: #3c3c3c;
+$input: $icons;
+$border--input: #ddd;
 $start: #ffb200;
 $text: #929292;
 $main--btn--bg: #00256e;
@@ -38,3 +40,8 @@ $weight--bold: 600;
 $weight--normal: 500;
 $weight--lighter: 300;
 $weight--thin: 100;
+
+//--------
+// Font Weight
+//--------
+$radius--default: 2px;

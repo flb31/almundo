@@ -1,0 +1,12 @@
+@import '../../../styles/settings/conf';
+
+.input {
+    color: $input;
+    width: 100%;
+    height: 30px;
+    border-radius: $radius--default;
+    border: 1px solid $border--input;
+    border-top-color: $input;
+    outline: none;
+    padding: 0 $half--space;
+}

@@ -6,6 +6,10 @@
     overflow-y: hidden;
     transition: ease all .4s;
 
+    >*:nth-child(2) {
+        margin-top: $space;
+    } 
+
     &__open {
         max-height: none;
 
