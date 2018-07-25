@@ -1,0 +1,77 @@
+@import '../../../../styles/settings/conf';
+
+.hotel > div {
+    display: flex;
+}
+
+.image {
+    width: 100%;
+}
+
+.summary {
+
+    h1 {
+        font-size: 15px;
+        color: $title;
+        margin-top: 0;
+        margin-bottom: $quarter--space;
+    }
+    
+    .stars {
+        margin-bottom: $half--space;
+    
+        img {
+            width: 16px;
+            fill: $star;
+            margin-right: $quarter--space;
+        }
+    }
+    
+    .amenity {
+        img {
+            width: 24px;
+            margin-right: $quarter--space;
+        }
+    }
+}
+
+.price {
+    
+    .container {
+        border-left: 1px $border--dashed dashed;
+        padding: 0 $space 0 $double--space;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: $weight--normal;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $price;
+
+        b {
+            margin-left: $quarter--space;
+            font-size: 34px;
+        }
+    }
+    
+    p {
+        margin-top: 0;
+        margin-bottom: $space;
+        font-size: 12px;
+        color: $icons;
+        text-align: center;
+        font-weight: $weight--thin;
+    }
+
+    button {
+        max-width: 180px;
+    }
+}

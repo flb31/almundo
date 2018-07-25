@@ -5,6 +5,7 @@ import Box from 'Components/App/Box';
 import Input from 'Components/App/Input';
 import Button from 'Components/App/Button';
 import FilterStar from 'Components/App/FilterStar';
+import { HotelCard } from 'Components/App/Hotel';
 
 import styles from './App.scss';
 import sharedStyles from 'Styles/index.scss';
@@ -51,6 +52,12 @@ class App extends Component {
 
                         </Accordion>
                     </aside>
+
+                    <section className={`${sharedStyles.grid__item} ${sharedStyles['three-quarters']}`}>
+                        <HotelCard className={sharedStyles['m-half-b']} />
+                        <HotelCard className={sharedStyles['m-half-b']} />
+                        <HotelCard className={sharedStyles['m-half-b']} />
+                    </section>
                 </div>
 
             </div>
