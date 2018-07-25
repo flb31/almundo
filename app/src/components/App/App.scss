@@ -1,5 +1,22 @@
 @import '../../styles/settings/conf';
 
+
 body {
   background-color: $main--bg;
+  font-family: Arial;
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+}
+
+.title_filter {
+  font-size: 14px;
+  color: $icons;
+  padding: $half--space;
+  background-color: $containers--bg;
+  padding: $half--space;
+  box-shadow: 0 0 1px rgba($box-shadow, 0.5);
 }

@@ -1,0 +1,57 @@
+@import '../../../styles/settings/conf';
+
+.container {
+    $root: &;
+    background-color: $containers--bg;
+    padding: $half--space;
+    box-shadow: 0 0 1px rgba($box-shadow, 0.5);
+    max-height: 36px;
+    overflow-y: hidden;
+    transition: ease all .4s;
+
+    &__open {
+        max-height: none;
+
+        #{$root}__header {
+            &:after {
+                transform: rotateX(-180deg);
+            }
+        }
+    }
+
+    &__header {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-bottom: $half--space;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid $title;
+            transition: ease all .4s;
+            align-self: center;
+            right: 0;
+            position: absolute;
+        }
+    }
+}
+
+.title {
+    color: $title;
+    font-size: 13px;
+    font-weight: $weight--bold;
+}
+
+.icon {
+    width: 13px;
+    margin-right: 5px;
+    
+    path {
+        fill: $title;
+    }
+}
