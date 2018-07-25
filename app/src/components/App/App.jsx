@@ -22,7 +22,7 @@ class App extends Component {
 
         return items.map( (hotel, index) => {
             return <HotelCard
-                key={index}
+                key={hotel.id}
                 hotel={hotel}
                 className={sharedStyles['m-half-b']}
                 sharedStyles={sharedStyles} />
