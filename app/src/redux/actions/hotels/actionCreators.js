@@ -1,20 +1,41 @@
 import axios from 'axios';
-
-import { LIST_HOTELS, FILTER_HOTELS } from './actions';
+import * as actionTypes from './actions';
 
 export function listHotels(apiData) {
-  return { type: LIST_HOTELS, payload: apiData };
+  return { type: actionTypes.API_MOUNT, payload: apiData };
 }
 
 export function getListHotels() {
     return (dispatch) => {
-      axios
-        .get(`${process.env.REACT_APP_API_URL}/hotels`)
-        .then(response => {
-            dispatch(listHotels(response.data));
-        })
-        .catch(error => {
-            console.error('axios error', error);
+        dispatch({
+            type: actionTypes.API_FETCH
         });
+
+
+        axios
+            .get(`${process.env.REACT_APP_API_URL}/hotels`)
+            .then(response => {
+
+                dispatch(
+                    listHotels({
+                            items: response.data,
+                            status: response.status,
+                    })
+                );
+
+                dispatch({
+                    type: actionTypes.API_STANDBY,
+                });
+            })
+            .catch(error => {
+                dispatch({
+                    type: actionTypes.API_STANDBY,
+                    payload: {
+                        error: error.message,
+                        items: [],
+                    }
+                });
+
+            });
     };
 }

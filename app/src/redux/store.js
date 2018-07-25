@@ -2,8 +2,10 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducer from './reducers';
 
+import initialHotels from './reducers/hotels/initialState';
+
 const defaultState = {
-  hotels: []
+  hotels: initialHotels
 };
 
 const store = createStore(

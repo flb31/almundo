@@ -1,2 +1,3 @@
-export const LIST_HOTELS = 'LIST_HOTELS';
-export const FILTER_HOTELS = 'FILTER_HOTELS';
+export const API_FETCH = 'API_FETCH_HOTELS';
+export const API_MOUNT = 'API_MOUNT_HOTELS';
+export const API_STANDBY = 'API_STANDBY_HOTELS';
