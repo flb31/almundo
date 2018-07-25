@@ -1,3 +1,5 @@
+@import "../../styles/settings/conf";
+
 .app {
   text-align: center;
 }
@@ -16,6 +18,7 @@
 
 .title {
   font-size: 1.5em;
+  color: $red;
 }
 
 .intro {

@@ -1,0 +1,23 @@
+/// --------
+/// Dependences
+/// --------
+
+@import 'settings/conf';
+@import 'settings/normalize';
+@import 'settings/mixins';
+@import 'settings/mesaures';
+@import 'settings/grid';
+@import 'settings/fix-grid';
+@import 'settings/displays';
+@import 'settings/spaces';
+@import 'settings/helpers';
+
+// Demo
+body {
+    background: lighten($red, 20%);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+}

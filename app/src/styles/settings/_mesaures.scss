@@ -1,0 +1,14 @@
+//--------
+// Mesaures
+//--------
+
+$screen: "only screen";
+$gt--s: "only screen and (min-width: #{$s--start})";
+$gt--md: "only screen and (min-width: #{$md--start})";
+$gt--lg: "only screen and (min-width: #{$lg--start})";
+
+$breakpoints: (
+    's' '(min-width: #{$s--start})',
+    'md' '(min-width: #{$md--start})',
+    'lg' '(min-width: #{$lg--start})',
+) !default;

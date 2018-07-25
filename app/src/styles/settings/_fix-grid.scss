@@ -1,0 +1,13 @@
+.grid {
+    margin-left: 0;
+    overflow: hidden;
+    
+    &.grid-negative {
+      margin-left: -$space;
+    }
+  }
+  
+.grid__item {
+    float: left;
+    padding-left: $space;
+}

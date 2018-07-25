@@ -1,0 +1,30 @@
+//--------
+//Setting space
+//--------
+$space: 20px !default;
+$double--space: $space * 2 !default;
+$triple--space: $space * 3 !default;
+$quad--space: $space * 4 !default;
+$half--space: $space / 2 !default;
+$quarter--space: $space / 4 !default;
+$none--space : 0;
+
+//--------
+// Breakpoints
+//--------
+$s--start: 750px!default;
+$md--start: 970px!default;
+$lg--start: 1170px!default;
+
+//--------
+// Colors
+//--------
+$red: red;
+
+//--------
+// Font Weight
+//--------
+$weight--bold: 600;
+$weight--normal: 500;
+$weight--lighter: 300;
+$weight--thin: 100;
