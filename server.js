@@ -5,7 +5,7 @@ import morgan from 'morgan';
 import bodyParser from 'body-parser';
 
 // Settings
-app.set('port', process.env.PORT || 3000 );
+app.set('port', process.env.PORT || 5000 );
 app.use(bodyParser.json());
 
 // Middlewares

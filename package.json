@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "server": "nodemon --exec babel-node server.js",
-    "test": "mocha \"./api/test/**/*.spec.js*\""
+    "test": "mocha \"./api/test/**/*.spec.js*\"",
+    "app": "cd app && yarn start"
   },
   "nodemonConfig": {
     "ignore": [
