@@ -1,12 +1,27 @@
 import express from 'express';
-const app = express();
-
+import dotenv from 'dotenv';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 
+const app = express();
+
 // Settings
+dotenv.config();
 app.set('port', process.env.PORT || 5000 );
 app.use(bodyParser.json());
+
+// Access control allow
+app.use( (req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', process.env.APP_URL_ACCESS_CONTROL);
+
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    next();
+});
 
 // Middlewares
 app.use( morgan('dev') );
