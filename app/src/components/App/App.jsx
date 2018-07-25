@@ -4,6 +4,7 @@ import Accordion from 'Components/App/Accordion';
 import Box from 'Components/App/Box';
 import Input from 'Components/App/Input';
 import Button from 'Components/App/Button';
+import FilterStar from 'Components/App/FilterStar';
 
 import styles from './App.scss';
 import sharedStyles from 'Styles/index.scss';
@@ -45,7 +46,9 @@ class App extends Component {
                             icon={starIcon}
                             title="Estrellas"
                             className={sharedStyles['m-quarter-t']}>
-                            stars here
+                            
+                            <FilterStar />
+
                         </Accordion>
                     </aside>
                 </div>

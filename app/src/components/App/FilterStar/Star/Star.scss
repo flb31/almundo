@@ -1,0 +1,21 @@
+@import '../../../../styles/settings/conf';
+
+.star {
+    display: flex;
+    align-items: center;
+    margin-bottom: $space;
+
+    input[type=checkbox] {
+        margin-right: 8px;
+    }
+
+    img {
+        width: 12px;
+        fill: $star;
+        margin-right: 3px;
+    }
+
+    strong {
+        font-size: 11px;
+    }
+}
