@@ -1,7 +1,20 @@
 @import '../../../../styles/settings/conf';
+@import '../../../../styles/settings/mesaures';
 
 .hotel > div {
-    display: flex;
+    @media #{$gt--small} {
+        display: flex;
+    }
+}
+
+.image,
+.summary,
+.price {
+    margin-bottom: $half--space;
+
+    @media #{$gt--small} {
+        margin-bottom: 0;
+    }
 }
 
 .image {
@@ -36,15 +49,22 @@
 }
 
 .price {
+    padding-left: 30px !important;
     
     .container {
-        border-left: 1px $border--dashed dashed;
-        padding: 0 $space 0 $double--space;
+        border-top: 1px $border--dashed dashed;
         height: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        padding: $space 0 $double--space 0;
+
+        @media #{$gt--small} {
+            border-top: none;
+            border-left: 1px $border--dashed dashed;
+            padding: 0 $space 0 $double--space;
+        }
     }
 
     h1 {
