@@ -23,6 +23,9 @@ app.use( (req, res, next) => {
     next();
 });
 
+// Static files
+app.use('/static', express.static('public'));
+
 // Middlewares
 app.use( morgan('dev') );
 
