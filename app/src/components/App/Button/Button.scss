@@ -1,0 +1,24 @@
+@import '../../../styles/settings/conf';
+
+.button {
+    background-color: $main--btn--bg;
+    color: $main--btn--text;
+    height: 30px;
+    border: none;
+    border-radius: $radius--default;
+    transition: ease all .4s;
+    cursor: pointer;
+    border-bottom: 2px solid $main--btn--border;
+
+    &:hover {
+        background-color: $main--btn--bg--hover;
+    } 
+}
+
+.full {
+    width: 100%;
+}
+
+.big {
+
+}

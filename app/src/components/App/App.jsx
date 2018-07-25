@@ -3,6 +3,7 @@ import Header from 'Components/App/Header';
 import Accordion from 'Components/App/Accordion';
 import Box from 'Components/App/Box';
 import Input from 'Components/App/Input';
+import Button from 'Components/App/Button';
 
 import styles from './App.scss';
 import sharedStyles from 'Styles/index.scss';
@@ -31,6 +32,10 @@ class App extends Component {
                             <div className={`${sharedStyles.grid} ${sharedStyles['grid-negative']}`}>
                                 <div className={`${sharedStyles.grid__item} ${sharedStyles['two-thirds']}`}>
                                     <Input placeholder="Ingrese el nombre del hotel" />
+                                </div>
+
+                                <div className={`${sharedStyles.grid__item} ${sharedStyles['one-third']} ${sharedStyles['p-half-h']}`}>
+                                    <Button>Aceptar</Button>
                                 </div>
                             </div>
 
