@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Box from 'Components/App/Box';
 import { string, bool } from 'prop-types';
 import classNames from 'classnames';
 import styles from './Accordion.scss';
@@ -26,7 +27,7 @@ class Accordion extends Component {
         const classToogle = classNames({[styles.container__open]: this.state.show});
 
         return (
-            <div className={`${styles.container} ${this.props.className} ${classToogle}`}>
+            <Box className={`${styles.container} ${this.props.className} ${classToogle}`}>
                 <div
                     className={styles.container__header}
                     onClick={this.toogle}>
@@ -38,7 +39,7 @@ class Accordion extends Component {
                     <span className={styles.title}>{this.props.title}</span>
                 </div>
                 {this.props.children}
-            </div>
+            </Box>
         )
     }
 }

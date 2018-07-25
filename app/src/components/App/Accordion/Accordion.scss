@@ -2,9 +2,6 @@
 
 .container {
     $root: &;
-    background-color: $containers--bg;
-    padding: $half--space;
-    box-shadow: 0 0 1px rgba($box-shadow, 0.5);
     max-height: 36px;
     overflow-y: hidden;
     transition: ease all .4s;

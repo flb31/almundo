@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Accordion from './Accordion';
+import Header from 'Components/App/Header';
+import Accordion from 'Components/App/Accordion';
+import Box from 'Components/App/Box';
 
 import styles from './App.scss';
 import sharedStyles from 'Styles/index.scss';
@@ -16,9 +17,9 @@ class App extends Component {
 
                 <div className={`${sharedStyles.grid} ${sharedStyles.p}`}>
                     <div className={`${sharedStyles.grid__item} ${sharedStyles['one-quarter']}`}>
-                        <div className={styles.title_filter}>
+                        <Box className={styles.title_filter}>
                             <strong>Filtros</strong>
-                        </div>
+                        </Box>
 
                         <Accordion
                             icon={searchIcon}

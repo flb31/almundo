@@ -1,0 +1,10 @@
+@import '../../../styles/settings/conf';
+
+.box {
+    font-size: 14px;
+    color: $icons;
+    padding: $half--space;
+    background-color: $containers--bg;
+    padding: $half--space;
+    box-shadow: 0 0 1px rgba($box-shadow, 0.5);
+}
