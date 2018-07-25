@@ -17,7 +17,7 @@ const HotelCard = (props) => {
                     <img
                         className={styles.image}
                         src="http://via.placeholder.com/300x200"
-                        alt="Image Hotel" />
+                        alt="Main Hotel" />
                 </figure>
 
                 <summary className={`${sharedStyles.grid__item} ${sharedStyles['one-third']} ${sharedStyles['p-half-l']} ${styles.summary}`}>

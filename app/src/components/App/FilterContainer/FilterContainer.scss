@@ -1,0 +1,29 @@
+@import '../../../styles/settings/conf';
+@import '../../../styles/settings/mesaures';
+
+.container {
+    max-height: 32px;
+    
+    @media #{$gt--mid} {
+        padding: 0;
+        background-color: transparent;
+        max-height: none;
+    }
+}
+
+.header {
+    justify-content: center;
+    text-align: center;
+    
+    span {
+        margin-right: $half--space;
+    }
+
+    &:after {
+        position: relative;
+    }
+
+    @media #{$gt--mid} {
+        display: none;
+    }
+}

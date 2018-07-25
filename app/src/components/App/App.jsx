@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import Header from 'Components/App/Header';
-import Accordion from 'Components/App/Accordion';
 import Box from 'Components/App/Box';
-import Input from 'Components/App/Input';
-import Button from 'Components/App/Button';
-import FilterStar from 'Components/App/FilterStar';
+import FilterContainer from './FilterContainer';
 import { HotelCard } from 'Components/App/Hotel';
 
-import styles from './App.scss';
+import './App.scss';
 import sharedStyles from 'Styles/index.scss';
-
-import searchIcon from 'Assets/icons/filters/search.svg';
-import starIcon from 'Assets/icons/filters/star.svg';
-
 
 class App extends Component {
     render() {
@@ -20,40 +13,16 @@ class App extends Component {
             <div>
                 <Header />
 
-                <div className={`${sharedStyles.grid} ${sharedStyles.p}`}>
-                    <aside className={`${sharedStyles.grid__item} ${sharedStyles['one-quarter']}`}>
-                        <Box className={styles.title_filter}>
+                <div className={`${sharedStyles.grid} ${sharedStyles['mid--p']} ${sharedStyles['grid-negative']}`}>
+                    <aside className={`${sharedStyles.grid__item} ${sharedStyles['one-whole']} ${sharedStyles['mid--one-quarter']}`}>
+                        <Box className={`${sharedStyles['phone--hidden']} ${sharedStyles['mid--show-block']}`}>
                             <strong>Filtros</strong>
                         </Box>
 
-                        <Accordion
-                            icon={searchIcon}
-                            title="Nombre de hotel"
-                            className={sharedStyles['m-quarter-t']}>
-
-                            <div className={`${sharedStyles.grid} ${sharedStyles['grid-negative']}`}>
-                                <div className={`${sharedStyles.grid__item} ${sharedStyles['two-thirds']}`}>
-                                    <Input placeholder="Ingrese el nombre del hotel" />
-                                </div>
-
-                                <div className={`${sharedStyles.grid__item} ${sharedStyles['one-third']} ${sharedStyles['p-half-h']}`}>
-                                    <Button>Aceptar</Button>
-                                </div>
-                            </div>
-
-                        </Accordion>
-
-                        <Accordion
-                            icon={starIcon}
-                            title="Estrellas"
-                            className={sharedStyles['m-quarter-t']}>
-                            
-                            <FilterStar />
-
-                        </Accordion>
+                        <FilterContainer sharedStyles={sharedStyles} />
                     </aside>
 
-                    <section className={`${sharedStyles.grid__item} ${sharedStyles['three-quarters']}`}>
+                    <section className={`${sharedStyles.grid__item} ${sharedStyles['one-whole']}  ${sharedStyles['mid--three-quarters']} ${sharedStyles['p']} ${sharedStyles['p-double-l']} ${sharedStyles['mid--p-v-none']}  ${sharedStyles['mid--p-r-none']} ${sharedStyles['mid--p-l']}`}>
                         <HotelCard className={sharedStyles['m-half-b']} />
                         <HotelCard className={sharedStyles['m-half-b']} />
                         <HotelCard className={sharedStyles['m-half-b']} />

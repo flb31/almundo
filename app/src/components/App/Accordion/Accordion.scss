@@ -11,7 +11,7 @@
     } 
 
     &__open {
-        max-height: none;
+        max-height: none !important;
 
         #{$root}__header {
             &:after {
