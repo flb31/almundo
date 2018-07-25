@@ -1,32 +1,24 @@
 import React, { Component } from 'react';
 import styles from './Input.scss';
-import { string } from 'prop-types';
+import { string, func } from 'prop-types';
 
 class Input extends Component {
-    state = {
-        value: ''
-    }
+    state = {}
 
-    componentWillMount() {
-        this.setState({
-            value: this.props.value
-        })
-    }
-
-
-    handleChange = (event) => {
-        this.setState({
-            value: event.target.value
-        });
+    handleEnter = (e) => {
+        if(e.keyCode === 13) {
+            this.props.onEnter();
+        }
     }
 
     render() { 
         return (
             <input
-                onChange={this.handleChange}
                 className={`${this.props.className} ${styles.input}`}
-                value={this.state.value}
+                value={this.props.value}
                 placeholder={this.props.placeholder}
+                onChange={(e) => { this.props.onChange(e) }}
+                onKeyUp={this.handleEnter}
             />
         );
     }
@@ -35,13 +27,17 @@ class Input extends Component {
 Input.defaultProps = {
     className: '',
     placeholder: '',
-    value: ''
+    value: '', 
+    onChange: () => {},
+    onEnter: () => {}
 };
 
 Input.propTypes = {
     placeholder: string,
     className: string,
-    value: string
+    value: string,
+    onChange: func,
+    onEnter: func
 };
  
 export default Input;
