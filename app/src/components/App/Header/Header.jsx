@@ -6,9 +6,11 @@ class Header extends Component {
     state = { }
     render() { 
         return (
-            <div className={styles.header}>
-                <img src={logo} alt="Logo almundo.com"/>
-            </div>
+            <header className={styles.header}>
+                <figure>
+                    <img src={logo} alt="Logo almundo.com"/>
+                </figure>
+            </header>
         );
     }
 }

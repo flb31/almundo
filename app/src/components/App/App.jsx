@@ -16,7 +16,7 @@ class App extends Component {
                 <Header />
 
                 <div className={`${sharedStyles.grid} ${sharedStyles.p}`}>
-                    <div className={`${sharedStyles.grid__item} ${sharedStyles['one-quarter']}`}>
+                    <aside className={`${sharedStyles.grid__item} ${sharedStyles['one-quarter']}`}>
                         <Box className={styles.title_filter}>
                             <strong>Filtros</strong>
                         </Box>
@@ -34,7 +34,7 @@ class App extends Component {
                             className={sharedStyles['m-quarter-t']}>
                             stars here
                         </Accordion>
-                    </div>
+                    </aside>
                 </div>
 
             </div>

@@ -2,12 +2,16 @@
 
 
 body {
-  background-color: $main--bg;
-  font-family: Arial;
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-  }
+    background-color: $main--bg;
+    font-family: Arial;
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    figure {
+        margin: 0;
+    }
 }
