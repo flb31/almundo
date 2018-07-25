@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from 'Components/App/Box';
 import Button from 'Components/App/Button';
+import { Star } from 'Components/App/Icons';
 
 import stylesButton from 'Components/App/Button/Button.scss';
 import styles from './HotelCard.scss';
 
-import starIcon from 'Assets/icons/filters/star.svg';
 import amenityIcon from 'Assets/icons/amenities/bathtub.svg';
 
 const HotelCard = (props) => {
@@ -24,9 +24,9 @@ const HotelCard = (props) => {
                 <summary className={`${sharedStyles.grid__item} ${sharedStyles['one-whole']} ${sharedStyles['tablet--one-third']} ${sharedStyles['p-half-l']} ${styles.summary}`}>
                     <h1>Hotel Stefanos</h1>
                     <div className={styles.stars}>
-                        <img src={starIcon} alt="Star" />
-                        <img src={starIcon} alt="Star" />
-                        <img src={starIcon} alt="Star" />
+                        <Star />
+                        <Star />
+                        <Star />
                     </div>
 
                     <div className={styles.amenity}>

@@ -39,6 +39,15 @@
             right: 0;
             position: absolute;
         }
+
+        svg {
+            width: 13px;
+            margin-right: 5px;
+            
+            path {
+                fill: $title;
+            }
+        }
     }
 }
 
@@ -46,13 +55,4 @@
     color: $title;
     font-size: 13px;
     font-weight: $weight--bold;
-}
-
-.icon {
-    width: 13px;
-    margin-right: 5px;
-    
-    path {
-        fill: $title;
-    }
 }

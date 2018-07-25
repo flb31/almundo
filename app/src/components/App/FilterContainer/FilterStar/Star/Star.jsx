@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { string, func, number } from 'prop-types';
 import styles from './Star.scss';
-import starIcon from 'Assets/icons/filters/star.svg';
+import { Star as StarIcon } from 'Components/App/Icons';
 
 class Star extends Component {
     state = {}
@@ -11,7 +11,7 @@ class Star extends Component {
         const stars = [];
         for(let i = 0;  i < this.props.numberStars; i ++) {
             stars.push(
-                <img key={i} src={starIcon} alt={`Star ${i}`} />
+                <StarIcon key={i}/>
             );
         }
 

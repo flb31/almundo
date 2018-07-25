@@ -9,10 +9,13 @@
         margin-right: 8px;
     }
 
-    img {
+    svg {
         width: 12px;
-        fill: $star;
         margin-right: 3px;
+
+        g {
+            fill: $star;
+        }
     }
 
     strong {

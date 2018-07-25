@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import Accordion from 'Components/App/Accordion';
 import FilterSearch from './FilterSearch';
 import FilterStar from './FilterStar';
+import { Search as searchIcon, Star as starIcon } from 'Components/App/Icons';
 
 import styles from './FilterContainer.scss';
-import searchIcon from 'Assets/icons/filters/search.svg';
-import starIcon from 'Assets/icons/filters/star.svg';
 
 class FilterContainer extends Component {
     

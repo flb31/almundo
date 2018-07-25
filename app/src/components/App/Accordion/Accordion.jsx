@@ -25,14 +25,15 @@ class Accordion extends Component {
     render() {
 
         const classToogle = classNames({[styles.container__open]: this.state.show});
-        const icon = (this.props.icon) ? <img className={styles.icon} src={this.props.icon} alt={this.props.title}/> : null
-
+        
+        const icon = (this.props.icon) ? <this.props.icon /> : null;
+        
         return (
             <Box className={`${styles.container} ${this.props.className} ${classToogle}`}>
                 <div
                     className={`${styles.container__header} ${this.props.classNameHeader}`}
                     onClick={this.toogle}>
-                    {icon}
+                    { icon }
     
                     <span className={styles.title}>{this.props.title}</span>
                 </div>
@@ -46,11 +47,10 @@ Accordion.defaultProps = {
     className: '',
     classNameHeader: '',
     startOpen: true,
-    icon: ''
+    icon: null
 };
 
 Accordion.propTypes = {
-    icon: string,
     title: string.isRequired,
     className: string,
     classNameHeader: string,

@@ -33,10 +33,13 @@
     .stars {
         margin-bottom: $half--space;
     
-        img {
+        svg {
             width: 16px;
-            fill: $star;
             margin-right: $quarter--space;
+
+            g {
+                fill: $star;
+            }
         }
     }
     
