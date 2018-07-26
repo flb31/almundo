@@ -6,7 +6,9 @@
   "scripts": {
     "server": "nodemon --exec babel-node server.js",
     "test": "mocha \"./api/test/**/*.spec.js*\"",
-    "app": "cd app && yarn start"
+    "app:start": "cd app && yarn start",
+    "app:test": "cd app && yarn test",
+    "app:build": "cd app && yarn build"
   },
   "nodemonConfig": {
     "ignore": [
