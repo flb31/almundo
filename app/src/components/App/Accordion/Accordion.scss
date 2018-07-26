@@ -13,7 +13,7 @@
     &__open {
         max-height: none !important;
 
-        #{$root}__header {
+        >#{$root}__header {
             &:after {
                 transform: rotateX(-180deg);
             }
