@@ -5,6 +5,7 @@ import Button from 'Components/App/Button';
 // Redux
 import { connect } from 'react-redux';
 import { getListHotels } from 'Redux/actions/hotels/actionCreators';
+import { setFilter } from 'Redux/actions/filters/actionCreators';
 
 class FilterSearch extends Component {
     state = { 
@@ -12,7 +13,11 @@ class FilterSearch extends Component {
     }
 
     searchByText = () => {
-        this.props.getListHotels(this.state.value);
+        const params = this.props.filters.params ? this.props.filters.params : '';
+        this.props.getListHotels(this.state.value, params);
+        this.props.setFilter({
+            q: this.state.value
+        });
     }
 
     handleChange = (event) => {
@@ -46,13 +51,16 @@ class FilterSearch extends Component {
 const mapStateToProps = (state, ownProps) => {
     
     return {
-        hotels: state.hotels
+        filters: state.filters
     };
 };
   
 const mapDispatchToProps = (dispatch, ownProps) => ({
     getListHotels(query) {
         dispatch(getListHotels(query));
+    },
+    setFilter(filter) {
+        dispatch(setFilter(filter));
     }
 });
   

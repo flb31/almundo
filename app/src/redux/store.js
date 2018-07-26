@@ -5,7 +5,8 @@ import reducer from './reducers';
 import initialHotels from './reducers/hotels/initialState';
 
 const defaultState = {
-  hotels: initialHotels
+  hotels: initialHotels,
+  filters: {}
 };
 
 const store = createStore(

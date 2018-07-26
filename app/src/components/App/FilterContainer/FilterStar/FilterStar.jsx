@@ -4,6 +4,7 @@ import Star from './Star';
 // Redux
 import { connect } from 'react-redux';
 import { getListHotels } from 'Redux/actions/hotels/actionCreators';
+import { setFilter } from 'Redux/actions/filters/actionCreators';
 
 class FilterStar extends Component {
     state = {
@@ -29,7 +30,12 @@ class FilterStar extends Component {
             this.unCheckedStartAll();
         }
 
-        this.props.getListHotels('', params);
+        const q = (this.props.filters.q) ? this.props.filters.q : '';
+        this.props.getListHotels(q, params);
+
+        this.props.setFilter({
+            params: params
+        });
     }
 
     unCheckedAll = () => {
@@ -131,13 +137,16 @@ class FilterStar extends Component {
 const mapStateToProps = (state, ownProps) => {
     
     return {
-        
+        filters: state.filters
     };
 };
   
 const mapDispatchToProps = (dispatch, ownProps) => ({
     getListHotels(q, params) {
         dispatch(getListHotels(q, params));
+    },
+    setFilter(filter) {
+        dispatch(setFilter(filter));
     }
 });
   
