@@ -5,7 +5,7 @@ export function listHotels(apiData) {
   return { type: actionTypes.API_MOUNT, payload: apiData };
 }
 
-export function getListHotels(q = '') {
+export function getListHotels(q = '', params = '') {
     return (dispatch) => {
         dispatch({
             type: actionTypes.API_FETCH
@@ -13,7 +13,7 @@ export function getListHotels(q = '') {
 
 
         axios
-            .get(`${process.env.REACT_APP_API_URL}/hotels?q=${q}`)
+            .get(`${process.env.REACT_APP_API_URL}/hotels?q=${q}${params}`)
             .then(response => {
 
                 dispatch(

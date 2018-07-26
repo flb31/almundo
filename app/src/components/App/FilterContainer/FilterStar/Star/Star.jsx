@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { string, func, number } from 'prop-types';
+import { string, func, number, bool, shape } from 'prop-types';
 import styles from './Star.scss';
 import { Star as StarIcon } from 'Components/App/Icons';
 
@@ -9,7 +9,7 @@ class Star extends Component {
     renderStars = () => {
 
         const stars = [];
-        for(let i = 0;  i < this.props.numberStars; i ++) {
+        for(let i = 0;  i < this.props.star.numberStars; i ++) {
             stars.push(
                 <StarIcon key={i}/>
             );
@@ -19,7 +19,7 @@ class Star extends Component {
     }
 
     render() {
-        const { numberStars } = this.props;
+        const { numberStars } = this.props.star;
         let stars = null;
         const idLabel = `label-star-${numberStars}`;
 
@@ -32,9 +32,12 @@ class Star extends Component {
         return (
             <label
                 htmlFor={idLabel}
-                className={styles.star}
-                onClick={(e) => this.props.onClick(numberStars) }>
-                <input type="checkbox" id={idLabel} />
+                className={styles.star}>
+                <input
+                    checked={this.props.star.checked}
+                    onChange={(e) => { this.props.star.callback(e, this.props.star) } }
+                    type="checkbox"
+                    id={idLabel} />
 
                 {stars}
             </label>
@@ -44,14 +47,17 @@ class Star extends Component {
 
 Star.defaultProps = {
     className: '',
-    onClick: () => {},
-    numberStars: 0
 };
 
 Star.propTypes = {
     className: string,
     onClick: func,
-    numberStars: number
+    star: shape({
+        callback: func.isRequired,
+        numberStars: number.isRequired,
+        checked: bool.isRequired
+    }).isRequired
+    
 };
 
 export default Star;

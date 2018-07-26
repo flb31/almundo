@@ -50,7 +50,7 @@ const mapStateToProps = (state, ownProps) => {
     };
 };
   
-const mapDispatchToProps = (dispatch: Function, ownProps) => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
     getListHotels(query) {
         dispatch(getListHotels(query));
     }
