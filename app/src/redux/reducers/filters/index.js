@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import { SET_FILTER } from 'Redux/actions/filters/actions';
 
 const filters = (state = {}, action) => {
