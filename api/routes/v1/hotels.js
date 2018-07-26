@@ -4,7 +4,7 @@ module.exports = function(app) {
 
     app.get('/v1/hotels', (req, res) => {
 
-        Hotel.get(req.query.q, req, (result) => {
+        Hotel.get(req, (result) => {
             
             // delay on purpose
             setTimeout(() => {
